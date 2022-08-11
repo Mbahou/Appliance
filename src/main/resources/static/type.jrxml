@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="type" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="caec29d8-20b2-4ba8-94da-918f6a248eb7">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="id" class="java.lang.Long"/>
+	<field name="libelle" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<rectangle>
+				<reportElement x="10" y="0" width="555" height="87" backcolor="#404040" uuid="743f0fff-f8dd-4687-ac0a-08c54af87e9d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="0" width="555" height="87" forecolor="#0F0303" backcolor="#524B4A" uuid="9c50b7bd-cf94-4c5b-bb29-1cec4b0987e2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="40" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="430" y="28" width="100" height="30" uuid="d2ab6bb6-cdc6-414e-aa22-85528bc82be1"/>
+				<textElement textAlignment="Left">
+					<font size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="15" width="140" height="51" uuid="464c27e2-86ba-4c29-bfa6-97f23a2f3dab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="25" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="15" width="140" height="51" uuid="46320930-efe0-4768-80fb-617bcfefa846"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="25" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Libelle]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50" splitType="Stretch">
+			<textField>
+				<reportElement x="110" y="0" width="140" height="50" uuid="6152acbf-2261-47c7-9f00-2be5cadd8a91"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="140" height="50" uuid="87cadf39-29e2-4a99-a469-c5d11a764b17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{libelle}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
